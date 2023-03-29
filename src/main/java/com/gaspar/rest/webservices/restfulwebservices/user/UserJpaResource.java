@@ -25,22 +25,22 @@ import jakarta.validation.Valid;
 @RestController
 public class UserJpaResource {
 
-	private UserRepository repository;
+	private UserRepository userRepository;
 	private PostRepository postRepository;
 	
 	public UserJpaResource(UserRepository repository, PostRepository postRepository) {
-		this.repository = repository;
+		this.userRepository = repository;
 		this.postRepository = postRepository;
 	}
 	
 	@GetMapping("/jpa/users")
 	public List<User> retrieveAllUsers(){
-		return repository.findAll();
+		return userRepository.findAll();
 	}
 	
 	@GetMapping("/jpa/users/{id}")
 	public EntityModel<User> retrieveUser(@PathVariable int id){
-		User user = repository.findById(id).orElse(null);
+		User user = userRepository.findById(id).orElse(null);
 		if (user == null) {
 			throw new UserNotFoundException("id: " + id);
 		}
@@ -53,15 +53,15 @@ public class UserJpaResource {
 	
 	@DeleteMapping("/jpa/users/{id}")
 	public void deleteUser(@PathVariable int id){
-		if (repository.findById(id).isEmpty()) {
+		if (userRepository.findById(id).isEmpty()) {
 			throw new UserNotFoundException("id: " + id);
 		}
-		repository.deleteById(id);
+		userRepository.deleteById(id);
 	}
 	
 	@GetMapping("/jpa/users/{id}/posts")
 	public List<Post> retrieveUserPosts(@PathVariable int id){
-		User user = repository.findById(id).orElse(null);
+		User user = userRepository.findById(id).orElse(null);
 		if (user == null) {
 			throw new UserNotFoundException("id: " + id);
 		}
@@ -70,7 +70,7 @@ public class UserJpaResource {
 	
 	@PostMapping("/jpa/users")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
-		User saveduser = repository.save(user);
+		User saveduser = userRepository.save(user);
 		URI location = getLocationURI(saveduser.getId());
 		return ResponseEntity.created(location).build();
 	}
@@ -85,7 +85,7 @@ public class UserJpaResource {
 	
 	@PostMapping("/jpa/users/{id}/posts")
 	public ResponseEntity<Post> createUserPosts(@PathVariable int id, @Valid @RequestBody Post post){
-		User user = repository.findById(id).orElse(null);
+		User user = userRepository.findById(id).orElse(null);
 		if (user == null) {
 			throw new UserNotFoundException("id: " + id);
 		}
