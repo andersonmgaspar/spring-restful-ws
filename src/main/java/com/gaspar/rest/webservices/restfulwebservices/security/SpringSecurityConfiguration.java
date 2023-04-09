@@ -16,6 +16,7 @@ public class SpringSecurityConfiguration {
 				auth -> auth.anyRequest().authenticated()
 				);
 		http.httpBasic(withDefaults());
+		http.cors();
 		http.csrf().disable();
 		return http.build();
 	}
