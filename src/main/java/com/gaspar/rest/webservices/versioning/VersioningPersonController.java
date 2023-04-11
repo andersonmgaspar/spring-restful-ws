@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.versioning;
+package com.gaspar.rest.webservices.versioning;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

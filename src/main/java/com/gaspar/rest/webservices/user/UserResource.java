@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.user;
+package com.gaspar.rest.webservices.user;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 

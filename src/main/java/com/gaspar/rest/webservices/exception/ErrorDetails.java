@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.exception;
+package com.gaspar.rest.webservices.exception;
 
 import java.time.LocalDateTime;
 

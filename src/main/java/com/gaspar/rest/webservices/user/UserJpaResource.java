@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.user;
+package com.gaspar.rest.webservices.user;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.gaspar.rest.webservices.restfulwebservices.jpa.PostRepository;
-import com.gaspar.rest.webservices.restfulwebservices.jpa.UserRepository;
+import com.gaspar.rest.webservices.jpa.PostRepository;
+import com.gaspar.rest.webservices.jpa.UserRepository;
 
 import jakarta.validation.Valid;
 

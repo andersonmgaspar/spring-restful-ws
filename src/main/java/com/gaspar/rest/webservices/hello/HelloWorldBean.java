@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.hello;
+package com.gaspar.rest.webservices.hello;
 
 public class HelloWorldBean {
 

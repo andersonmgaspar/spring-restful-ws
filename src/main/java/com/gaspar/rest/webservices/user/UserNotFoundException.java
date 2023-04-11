@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.user;
+package com.gaspar.rest.webservices.user;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

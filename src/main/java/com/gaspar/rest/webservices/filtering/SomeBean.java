@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.filtering;
+package com.gaspar.rest.webservices.filtering;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
 

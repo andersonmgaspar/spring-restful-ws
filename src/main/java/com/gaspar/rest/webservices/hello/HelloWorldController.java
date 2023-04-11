@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.hello;
+package com.gaspar.rest.webservices.hello;
 
 import java.util.Locale;
 
@@ -24,7 +24,7 @@ public class HelloWorldController {
 
 	@GetMapping(path = "/hello-bean")
 	public HelloWorldBean sayHelloBean() {
-		return new HelloWorldBean("Hi there!");
+		return new HelloWorldBean("Hi there!<Bean>");
 	}
 
 	@GetMapping(path = "/hello-bean/{name}")

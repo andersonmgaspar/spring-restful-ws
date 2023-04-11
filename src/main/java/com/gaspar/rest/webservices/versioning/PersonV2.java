@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.versioning;
+package com.gaspar.rest.webservices.versioning;
 
 public class PersonV2 {
 

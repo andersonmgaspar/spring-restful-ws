@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.security;
+package com.gaspar.rest.webservices.security;
 
 
 import static org.springframework.security.config.Customizer.withDefaults;

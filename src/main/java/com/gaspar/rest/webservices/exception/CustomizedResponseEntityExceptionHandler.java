@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.exception;
+package com.gaspar.rest.webservices.exception;
 
 import java.time.LocalDateTime;
 import java.util.stream.Collectors;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.gaspar.rest.webservices.restfulwebservices.user.UserNotFoundException;
+import com.gaspar.rest.webservices.user.UserNotFoundException;
 
 @ControllerAdvice
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {

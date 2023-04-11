@@ -1,4 +1,4 @@
-package com.gaspar.rest.webservices.restfulwebservices.user;
+package com.gaspar.rest.webservices.user;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
